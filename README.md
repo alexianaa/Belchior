@@ -11,5 +11,4 @@ Repository built to prepare the project for the subject of Software Development 
 
 Our goal is to make it easier for consumers to find second-hand stores and for these stores to be found more easily contributing to sustainable fashion, for this we are creating a website using html, css and javascript
 =======
-#### Códigos .html e .css estão em suas respectivas pastas, mantenham essa organização pra não virar bagunça xD
 

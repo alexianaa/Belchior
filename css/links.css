@@ -1,0 +1,39 @@
+#overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #f0e9e9;
+	z-index: 90;
+	top: 0px;
+	left: 0px;
+}
+.PU_showRes {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	z-index: 91;
+}
+.showRes {
+	background-color: #ffffff;
+	padding: 10px;
+	font-family: Trocchi;
+	font-size: 12pt;
+}
+.titBoxRes {
+	font-size: 16pt;
+	font-weight: bold;
+}
+.res {
+	margin-left: 30px;
+	vertical-align: middle;
+	padding: 5px 0;
+}
+@media only screen and (min-width: 768px) {
+	.PU_showRes {
+		top: 20px;
+		left: 0px;
+		width: 50%;
+		margin-left: 25%;
+	}
+}

@@ -16,22 +16,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
     </head>
 
-    <body style="font-family: Trocchi; font-weight: 400; font-size: 18px; min-width: 780px;">
-    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+    <body>
         <!-- Topo da página (padrão em todo o site) -->
-        <div class="w-auto h-auto" style="background-color: rgba(222, 110, 75, 1); padding-left: 10%; padding-right: 10%;">
+        <div>
             <!-- Barra de navegação com menu responsivo --> 
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <!-- Logo -->
-                <a class="d-inline" style="margin-right: 50%;" href="index.html">
-                    <img style="width: 210px; height: 125px;" src="../img/logo.png" class="float-left">
-                </a>
-
+                <a class="d-inline" href="index.html"><img src="../img/logo.png"></a>
                 <!-- Menu compactado (aparece em telas pequenas) -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <!-- Navegação (páginas e seus links) -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -39,24 +32,26 @@
                             <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link text-white" href="sobre.html">Sobre nós</a>
+                            <a class="nav-link text-white" href="sobre.html">Sobre</a>
                         </li>
                         <li class="nav-item me-2">
                             <a class="nav-link text-white" href="cupons.html">Cupons</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="cadastro.html">Cadastro de Lojas</a>
+                            <a class="nav-link text-white" href="cadastro.html">Cadastro</a>
                         </li>
                     </ul>
                 </div>
-            </nav>    
+            </nav>     
         </div><!-- Fim do topo da página! -->
 
-
+        <div id="conteudo">
+            <h1>TESTE</h1>
+        </div>
 
         <!-- Rodape -->
-        <div style="background: rgba(122, 101, 99, 1);">
-            <div class="row" style="padding-left: 15%; padding-right: 10%; padding-top: 2%;">
+        <div id="rodape">
+            <div class="row" >
                 <!-- Textos do rodape -->
                 <div class="col-8 pt-2 ms-3">
                     <h4 class="text-white">Termos de uso</h4>
@@ -64,7 +59,7 @@
                 </div>
                 <!-- Logo da UnB -->
                 <div class="col-3">
-                    <img style="width: 80%; height: 70%; text-align: center;" src="../img/logo-unb.png">
+                    <img src="../img/logo-unb.png">
                 </div>
             </div>
         </div> <!-- Fim do rodape! -->

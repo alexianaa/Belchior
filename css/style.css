@@ -26,10 +26,14 @@ body {
 }
 
 /* CUSTOMIZAR LINKS DA NAVBAR */
-#mainNav .nav-link:hover, #mainNav .nav-link:active {
+#mainNav .nav-link:hover {
     font-weight: bold;
     color: black !important;
     border-bottom: 1px solid black;
+}
+
+#mainNav .nav-link:active {
+    background-color: antiquewhite;
 }
 
 /* CUSTOMIZAR ÁREA DE CONTEÚDOS */
@@ -39,12 +43,7 @@ body {
     padding-right: 10%; 
     height: fit-content; 
     font-size: 14px;
-    padding-top: 125px;
-}
-
-#Busca {
-    margin-top: 120px;
-    padding-bottom: 0;
+    margin-top: 125px;
 }
 
 #fotinhas {
@@ -58,6 +57,27 @@ body {
     width: 130px; 
     height: 130px; 
     margin-right: 1%;
+}
+
+#CardLoja {
+    text-align: center;
+    width: 18rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 1px solid gray;
+    margin-right: 1%;
+}
+
+#CardLoja img {
+    height: 20rem;
+}
+
+#botao {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background: #E56399;
+    border: 2px solid rgba(122, 101, 99, 1);
 }
 
 /* RODAPÉ */

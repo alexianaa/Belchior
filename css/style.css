@@ -62,5 +62,17 @@ body {
 
 /* RODAPÉ */
 #rodape {
+    background: rgba(122, 101, 99, 1);
     position: fixed bottom;
+    padding-left: 10%; 
+    padding-right: 10%; 
+    height: fit-content; 
+    font-size: 14px;
+}
+
+#rodape img {
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 90%;
+    height: 75%;
 }

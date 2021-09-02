@@ -14,6 +14,8 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <!-- Fonte da página -->
         <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+        <!-- form css -->
+        <link rel="stylesheet" href="../css/form.css">
     </head>
 
     <body>
@@ -56,7 +58,18 @@
                 <!-- Textos do rodape -->
                 <div class="col-8 pt-2 ms-3">
                     <h4 class="text-white">Termos de uso</h4>
-                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu tempus ex. Maecenas volutpat est eu augue sodales, in tempor tortor interdum.</p>
+                    <!-- form de contato -->
+                    <section class="contato">
+                        <div class="content">
+                            <h4 class="text-white" >Entre em contato conosco</h4>
+                            <form class="formulario" method="POST" action="./email.php">
+                                <input class="field" name="name" placeholder="Nome">
+                                <input class="field" name="email" placeholder="E-mail">
+                                <textarea class="field" name="message" placeholder="Digite sua mensagem aqui."></textarea>
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </section>
                 </div>
                 <!-- Logo da UnB -->
                 <div class="col-3">

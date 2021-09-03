@@ -26,10 +26,14 @@ body {
 }
 
 /* CUSTOMIZAR LINKS DA NAVBAR */
+#mainNav .nav-link {
+    border-bottom: 1px solid rgba(222, 110, 75, 1);
+}
+
 #mainNav .nav-link:hover {
     font-weight: bold;
     color: black !important;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid black !important;
 }
 
 /* CUSTOMIZAR ÁREA DE CONTEÚDOS */

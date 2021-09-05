@@ -3,7 +3,7 @@ body {
     font-family: Trocchi; 
     font-weight: 400; 
     font-size: 16px; 
-    min-width: 780px;
+
 }
 
 /* CUSTOMIZAR NAVBAR */
@@ -94,8 +94,9 @@ body {
     width: 18rem;
     padding-top: 1%;
     padding-bottom: 1%;
-    border: 1px solid gray;
+    border: 2px solid #DE6E4B;
     margin-right: 1%;
+    margin-bottom: 1%;
 }
 
 #CardLoja img {
@@ -106,12 +107,13 @@ body {
     color: white;
     font-size: 16px;
     font-weight: 500;
-    background: #E56399;
-    border: 2px solid rgba(122, 101, 99, 1);
+    background: #7A6563;
+    border: 2px solid black;
 }
 
 #botao:hover {
-    background: gray;
+    background: #E56399;
+    ;
 }
 
 /* RODAPÉ */

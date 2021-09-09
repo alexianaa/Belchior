@@ -247,7 +247,13 @@ body {
     text-align: center;
     color: white;
 }
-  
+
+/* Estrelas de avaliação*/
+.estrelas{
+    height: 1cm;
+    width: 1cm;
+}
+
 /* Barras de avaliação */
 .bar-5 {width: 60%; height: 18px; background-color: #7FD1B9;}
 .bar-4 {width: 30%; height: 18px; background-color: #7FD1B9;}

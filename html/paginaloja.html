@@ -14,6 +14,8 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <!-- Fonte da página -->
         <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+        <!-- js das estrelas -->
+        <script src="../js/scripts.js"></script>
     </head>
 
     <body>
@@ -70,7 +72,25 @@
                 <!-- Avaliação brechó -->
                 <div class="row">
                     <div class="col-7 espaço-colunas">
-                        <span class="heading "><h2>Avaliação:</h2></span>
+                        <h2 id="rating">Avaliação: 0</h2>
+                        
+                        <a href="javascript:void(0)" onclick="Avaliar(1)">
+                        <img class="estrelas" src="../img/star0.png" id="s1"></a>
+                                
+                        <a href="javascript:void(0)" onclick="Avaliar(2)">
+                        <img class="estrelas" src="../img/star0.png" id="s2"></a>
+                                
+                        <a href="javascript:void(0)" onclick="Avaliar(3)">
+                        <img class="estrelas" src="../img/star0.png" id="s3"></a>
+                                
+                        <a href="javascript:void(0)" onclick="Avaliar(4)">
+                        <img class="estrelas" src="../img/star0.png" id="s4"></a>
+                                
+                        <a href="javascript:void(0)" onclick="Avaliar(5)">
+                        <img class="estrelas" src="../img/star0.png" id="s5"></a>
+                        
+                    </span>
+                    <p></p>
 
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>

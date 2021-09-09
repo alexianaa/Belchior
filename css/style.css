@@ -206,6 +206,14 @@ body {
 .checked {
     color: orange;
 }
+
+.espaço-colunas{
+    padding-right: 150px;
+}
+
+.funcionamento{
+    padding-top: 50px;
+}
   
 /* Three column layout */
 .side {

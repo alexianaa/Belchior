@@ -246,6 +246,32 @@ body {
 .bar-3 {width: 10%; height: 18px; background-color: #7FD1B9;}
 .bar-2 {width: 4%; height: 18px; background-color: #7FD1B9;}
 .bar-1 {width: 15%; height: 18px; background-color: #7FD1B9;}
+
+/* CAROUSEL COM AS IMAGENS DA LOJA */
+#carouselPagLoja {
+    width: auto;
+    min-height: fit-content;
+    text-align: center;
+}
+
+#carouselPagLoja .carousel-control-next, .carousel-control-prev {
+    margin-top: 12%;
+    height: 50px;
+    width: 50px;
+    background-color: #E56399 !important;
+    color: #E56399;
+    border-width: 50px;
+    border-radius: 100%;
+    opacity: 1;
+}
+
+.img-paginaloja {
+    margin: 2%;
+    max-width: 400px;
+    min-height: 200px;
+    min-width: 200px;
+    width: 20%;
+}
   
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {

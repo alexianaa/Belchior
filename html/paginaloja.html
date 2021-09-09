@@ -49,13 +49,15 @@
         </div><!-- Fim do topo da página! -->
 
         <div id="conteudo" class="mt-5 mb-5">
+
+            <!-- Imagem e rating -->
             <div class="container">
                 <div class="">
                     <h1 class="nome-loja">Nome do brechó</h1>
                 </div>
                 <!-- Foto principal da loja -->
                 <div>
-                    <img src="../img/foto.png">
+                    <img src="../img/foto.png" class="img-fluid">
                 </div>
 
                 <!-- Avaliação brechó -->
@@ -134,7 +136,44 @@
                             <div>20</div>
                         </div>
                     </div>
+                    <span><h2 class="mt-5">Fotos:</h2></span>
                 </div>
+            </div>
+
+            <!-- Mais imagens da loja -->
+            <div>
+                <div id="carouselPagLoja" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselPagLoja" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselPagLoja" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselPagLoja" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img2.jpeg" class="d-inline-block img-paginaloja" alt="...">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img4.jpeg" class="d-none d-md-inline-block img-paginaloja" alt="...">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img3.jpeg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img2.jpeg" class="d-inline-block img-paginaloja" alt="...">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img4.jpeg" class="d-none d-md-inline-block img-paginaloja" alt="...">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img3.jpeg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img2.jpeg" class="d-inline-block img-paginaloja" alt="...">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img4.jpeg" class="d-none d-md-inline-block img-paginaloja" alt="...">
+                        <img src="../img/Sonho-Brecho/Sonho-Brecho-img3.jpeg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPagLoja" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPagLoja" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
         </div>
 

@@ -137,7 +137,7 @@ body {
     height: 75%;
 }
 
-/* FORMULÁRIO */
+/* FORMULÁRIO DE CONTATO*/
 .contato{
     display: flex;
     justify-content: center;
@@ -161,8 +161,25 @@ body {
     font-size: 16px;
 }
 
-.textarea{
+.text{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 16px;
     height: 150px;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: #7FD1B9;
+    padding: 0.3em;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.botao:hover{
+    background: #beffeb;
 }
 
 /* PÁGINA DE CADA LOJA */
@@ -274,4 +291,87 @@ body {
 
 .itenscupons:hover .sobreposicao {
     opacity: 1;
+}
+
+/* FORMULÁRIO DE CADASTRO */
+
+#formulario-cadastro{
+    font-family: Trocchi;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-left: 10%;
+}
+
+#check{
+    margin-bottom: 1em;
+    padding: 0.3em;
+}
+
+#inf-pessoais{
+    border: 1px solid ;
+    border-radius: 5px;
+    border-color: #E56399;
+    padding: 2%;
+    margin-bottom: 3em;
+    margin-right: 10em;
+}
+
+#inf-lojas{
+    border: 1px solid ;
+    border-radius: 5px;
+    border-color: #E56399;
+    padding: 2%;
+    margin-bottom: 3em;
+    margin-right: 10em;
+}
+
+fieldset{
+    border: 0;
+}
+
+input, select, button{
+    border-radius: 5px;
+}
+
+.campo{
+    margin-bottom: 1em;
+    font-family: Trocchi;
+}
+
+.campo label{
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+fieldset.grupo .campo{
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select{
+    padding: 0.2em;
+    border: 1px solid;
+    box-shadow: 2px 2px 2px #E56399;
+    display: block;
+}
+
+.campo select option{
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus{
+    background: #E5D4CE;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: #7FD1B9;
+    padding: 0.3em;
+    position:static;
+    margin-right: 9em;
+}
+
+.botao:hover{
+    background: #beffeb;
 }

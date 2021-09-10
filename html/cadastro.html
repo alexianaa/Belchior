@@ -48,94 +48,93 @@
             </nav>     
         </div><!-- Fim do topo da página! -->
 
-        <div id="conteudo">
+        <div id="conteudo" class="pt-3">
             <h1>Cadastro de lojas</h1>
             <p style="margin-right: 20%;">Preencha o formulário abaixo com as informações da loja e do proprietário para adiciona-la ao site, antes de tudo não se esqueça de ler os nossos termos de uso.</p>
             <br>
-        </div>
-
-        <form id="formulario-cadastro">
-            <div id="inf-pessoais">
-                <h4>Informações Pessoais</h4>
-                <div class="campo">
-                    <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" required>
+            <form id="formulario-cadastro">
+                <div id="inf-pessoais">
+                    <h4>Informações Pessoais</h4>
+                    <div class="campo">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+    
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+    
+                    <div class="campo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" name="telefone" id="telefone" required> 
+                    </div>
                 </div>
-
-                <div class="campo">
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-
-                <div class="campo">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" required> 
-                </div>
-            </div>
-
-            <div id="inf-lojas">
-                <h4>Informações da loja</h4>
-                <div class="campo">
-                    <label>Selecione o tipo de loja:</label>
-                    <label> <input type="radio" name="tipo" value="fisica" checked>Física </label>
-                    <label> <input type="radio" name="tipo" value="online">Digital </label>
-                    <label> <input type="radio" name="tipo" value="hibrida">Hibrída </label>
+    
+                <div id="inf-lojas">
+                    <h4>Informações da loja</h4>
+                    <div class="campo">
+                        <label>Selecione o tipo de loja:</label>
+                        <label> <input type="radio" name="tipo" value="fisica" checked>Física </label>
+                        <label> <input type="radio" name="tipo" value="online">Digital </label>
+                        <label> <input type="radio" name="tipo" value="hibrida">Hibrída </label>
+                    </div>
+                    
+                    <div class="campo">
+                        <label for="estado">Em qual estado a loja está localizada?</label>
+                        <select id="estado"  required>
+                            <option selected disabled value="">Selecione</option>
+                            <option>Acre</option>
+                            <option>Alagoas</option>
+                            <option>Amapá</option>
+                            <option>Amazonas</option>
+                            <option>Bahia</option>
+                            <option>Ceará</option>
+                            <option>Distrito Federal</option>
+                            <option>Espírito Santo</option>
+                            <option>Goiás</option>
+                            <option>Maranhão</option>
+                            <option>Mato Grosso do Sul</option>
+                            <option>Minas Gerais</option>
+                            <option>Pará</option>
+                            <option>Paraíba</option>
+                            <option>Paraná</option>
+                            <option>Pernambuco</option>
+                            <option>Piauí</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Rio Grande do Norte</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Rondônia</option>
+                            <option>Roraima</option>
+                            <option>Santa Catarina</option>
+                            <option>São Paulo</option>
+                            <option>Sergipe</option>
+                            <option>Tocantins</option>
+                        </select>
+                    </div>
+    
+                    <div id="check">
+                        <label>Selecione o tipo de produto que a loja vende:</label> <br><br>
+                        <input type="checkbox" id="produto1" name="produto1" value="Roupas">
+                        <label for="produto1">Roupas</label>
+                        <br>
+                        <input type="checkbox" id="produto1" name="produto2" value="Acessorios">
+                        <label for="produto2">Acessórios</label>
+                        <br>
+                        <input type="checkbox" id="produto1" name="produto3" value="Sapatos">
+                        <label for="produto3">Sapatos</label>
+                    </div>
                 </div>
                 
-                <div class="campo">
-                    <label for="estado">Em qual estado a loja está localizada?</label>
-                    <select id="estado"  required>
-                        <option selected disabled value="">Selecione</option>
-                        <option>Acre</option>
-                        <option>Alagoas</option>
-                        <option>Amapá</option>
-                        <option>Amazonas</option>
-                        <option>Bahia</option>
-                        <option>Ceará</option>
-                        <option>Espírito Santo</option>
-                        <option>Goiás</option>
-                        <option>Maranhão</option>
-                        <option>Mato Grosso do Sul</option>
-                        <option>Minas Gerais</option>
-                        <option>Pará</option>
-                        <option>Paraíba</option>
-                        <option>Paraná</option>
-                        <option>Pernambuco</option>
-                        <option>Piauí</option>
-                        <option>Rio de Janeiro</option>
-                        <option>Rio Grande do Norte</option>
-                        <option>Rio Grande do Sul</option>
-                        <option>Rondônia</option>
-                        <option>Roraima</option>
-                        <option>Santa Catarina</option>
-                        <option>São Paulo</option>
-                        <option>Sergipe</option>
-                        <option>Tocantins</option>
-                        <option>Distrito Federal</option>
-                    </select>
+    
+                <div style="margin-bottom: 2em; font-size: 0.5cm;">
+                    <input type="checkbox" id="termosdeuso" name="termos-de-uso" value="termos-de-uso" required>
+                    <label>Aceito os termos de uso</label>
                 </div>
-
-                <div id="check">
-                    <label>Selecione o tipo de produto que a loja vende:</label> <br><br>
-                    <input type="checkbox" id="produto1" name="produto1" value="Roupas">
-                    <label for="produto1">Roupas</label>
-                    <br>
-                    <input type="checkbox" id="produto1" name="produto2" value="Acessorios">
-                    <label for="produto2">Acessórios</label>
-                    <br>
-                    <input type="checkbox" id="produto1" name="produto3" value="Sapatos">
-                    <label for="produto3">Sapatos</label>
-                </div>
-            </div>
-            
-
-            <div style="margin-bottom: 2em; font-size: 0.5cm;">
-                <input type="checkbox" id="termosdeuso" name="termos-de-uso" value="termos-de-uso" required>
-                <label>Aceito os termos de uso</label>
-            </div>
-
-            <button type="submit" class="botao">Concluído</button>
-        </form>
+    
+                <button type="submit" class="botao">Concluído</button>
+            </form>
+        </div>
 
         <!-- Rodape -->
         <div id="rodape">

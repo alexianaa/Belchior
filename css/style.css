@@ -134,7 +134,7 @@ body {
 }
 
 #rodape img {
-    padding-top: 5%;
+    padding-top: 21%;
     padding-left: 5%;
     width: 90%;
     height: 75%;
@@ -421,5 +421,14 @@ fieldset.grupo .campo{
 .col-8 pt-2 ms-3{ 
     text-align:center;
     padding: 2%;
-    font-size: 3cm;
+    font-size: xx-large;
+}
+.col-3{
+    width: 15%;
+    margin-left: 200px;
+    text-align: right;
+}
+.nav-link active text-white{
+    font-size:xx-large;
+    font-weight: 900;
 }

@@ -48,6 +48,8 @@ body {
 /* TEXTO DA PÁGINA SOBRE NÓS */
 #sobre p {
     font-size: large;
+    margin-bottom: 4.5%;
+    
 }
 
 /* NOSSAS FOTOS */
@@ -128,6 +130,7 @@ body {
     padding-right: 10%; 
     height: fit-content; 
     font-size: 14px;
+    padding-top: 3%;
 }
 
 #rodape img {
@@ -413,4 +416,9 @@ fieldset.grupo .campo{
 
 .botao:hover{
     background: #beffeb;
+}
+
+.col-8 pt-2 ms-3{ 
+    text-align:center;
+    padding: 2%;
 }

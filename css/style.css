@@ -128,16 +128,17 @@ body {
     position: fixed bottom;
     padding-left: 10%; 
     padding-right: 10%; 
-    height: fit-content; 
+    height: fit-content;
+    max-height: 250px;
     font-size: 14px;
-    padding-top: 3%;
+    padding-top: 1%;
 }
 
 #rodape img {
-    padding-top: 21%;
-    padding-left: 5%;
     width: 90%;
     height: 75%;
+    max-width: 250px;
+    max-height: 200px;
 }
 
 /* FORMULÁRIO DE CONTATO*/
@@ -418,16 +419,6 @@ fieldset.grupo .campo{
     background: #beffeb;
 }
 
-.col-8 pt-2 ms-3{ 
-    text-align:center;
-    padding: 2%;
-    font-size: xx-large;
-}
-.col-3{
-    width: 15%;
-    margin-left: 200px;
-    text-align: right;
-}
 .nav-link active text-white{
     font-size:xx-large;
     font-weight: 900;

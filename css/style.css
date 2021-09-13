@@ -29,7 +29,7 @@ body {
     border-bottom: 1px solid #DE6E4B;
 }
 
-#mainNav .nav-link:hover {
+#mainNav .nav-link:hover, .active {
     font-weight: bold;
     color: black !important;
     border-bottom: 1px solid black !important;

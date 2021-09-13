@@ -313,9 +313,10 @@ body {
 
 .itenscupons {
     border: 2px solid #7A6563;
+    width: 250px;
+    margin-bottom: 5% !important;
     margin: 2%;
     height: 40px;
-    width: 30%;
     background-color: #DE6E4B;
     position: relative;
     display: inline-block;

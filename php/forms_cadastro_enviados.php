@@ -1,7 +1,14 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+  if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'S') {
+    header('Location: adm_page.php?login=error2');
+  };
+?>
+
 <html lang="pt-br">
     <head>
-        <title>Belchior</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <title>Belchior - ADM</title>
         <link rel="shortcut icon" href="../img/LogoFavicon.ico" type="image/x-icon">
         <meta charset="utf-8">
         <!-- Bootstrap 5.1 -->
@@ -28,44 +35,38 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item me-2">
-                            <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link text-white" href="../html/index.html">Home</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link text-white" href="sobre.html">Sobre</a>
+                            <a class="nav-link text-white" href="../html/sobre.html">Sobre</a>
                         </li>
                         <li class="nav-item me-2">
-                            <a class="nav-link text-white" href="cupons.html">Cupons</a>
+                            <a class="nav-link text-white" href="../html/cupons.html">Cupons</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="cadastro.php">Cadastro</a>
+                            <a class="nav-link text-white" href="../html/cadastro.php">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" href="contato.html">Contato</a>
+                            <a class="nav-link text-white" href="../html/contato.html">Contato</a>
                         </li>
                     </ul>
                 </div>
             </nav>     
-        </div>
-        <!-- Fim do topo da página! -->
+        </div><!-- Fim do topo da página! -->
 
-        <!-- Form de contato -->
+        <!-- Corpo da página -->
         <div id="conteudo" class="pt-5 pb-5">
-            <h3 class="mt-5">Entre em contato com a nossa equipe</h3>
-            <h6>Caso tenha algum problema a relatar ou sugestão é possível entrar em contato com os contrutores do site a partir do formulário abaixo, preencha os campos e aguarde que retornaremos com uma resposta assim que possível, desde já agradecemos.</h6>
-            <section class="contato">
-                <div class="content">
-                    <br>
-                    <form class="formulario mb-5 pb-5" method="POST" action="../php/testecontato.php">
-                        <input class="field" name="name" placeholder="Nome">
-                        <input class="field" name="email" placeholder="E-mail">
-                        <textarea class="text" name="message" placeholder="Digite sua mensagem aqui."></textarea>
-                        <br>
-                        <input type="submit" name="BTEnvia" class="botao-contato" value="Enviar">
-                    </form>
-                </div>
-            </section>
+            <h1>Formulários de cadastro recebidos</h1>
+            <?php
+                $cadastros = fopen("cadastros.txt", "r");
+                while (!feof($cadastros)) {
+                   $line = fgets($cadastros);
+                   echo "$line<br />";
+                }
+                fclose($cadastros);
+            ?>
         </div>
-
+        
         <!-- Rodape -->
         <div id="rodape">
             <div class="d-flex">
@@ -84,10 +85,8 @@
 
             </div>
         </div> <!-- Fim do rodape! -->
-    
+
         <!-- JavaScript Bundle with Popper (coisa pro bootstrap) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-        
     </body>
-
 </html>

@@ -50,6 +50,8 @@
         <!-- Corpo da página -->
         <div id="conteudo" class="pt-5 pb-5">
             
+            <!-- EMAIL: adm@adm.com SENHA: admin -->
+            
             <form style="width: 300px; text-align: center;" class="mx-auto" method="post" action="../php/admlogin.php">
                 <h1>Acesso ADM</h1>
                 <br>

@@ -52,7 +52,7 @@
             <h1>Cadastro de lojas</h1>
             <p style="margin-right: 20%;">Preencha o formulário abaixo com as informações da loja e do proprietário para adiciona-la ao site, antes de tudo não se esqueça de ler os nossos termos de uso.</p>
             <br>
-            <form id="formulario-cadastro" method="post" action="../php/forms_cadastro_enviados.php">
+            <form id="formulario-cadastro" method="post" action="../php/registrar_form_cadastro.php">
                 <div id="inf-pessoais">
                     <h4>Informações Pessoais</h4>
                     <div class="campo">
@@ -125,13 +125,17 @@
                         <label for="produto3">Sapatos</label>
                     </div>
                 </div>
-                
     
                 <div style="margin-bottom: 2em; font-size: 0.5cm;">
                     <input type="checkbox" id="termosdeuso" name="termos-de-uso" value="termos-de-uso" required>
                     <label>Aceito os termos de uso</label>
                 </div>
-    
+
+                <!-- Mensagens de resultado -->
+                <?php if (isset($_GET['submit']) && $_GET['submit'] == 'sucesso') { ?>
+                    <div class="text-success">Formulário de cadastro enviado!</div>
+                <?php }; ?>
+
                 <button type="submit" class="botao">Concluído</button>
             </form>
         </div>

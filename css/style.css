@@ -256,6 +256,9 @@ body {
 .estrelas{
     height: 1cm;
     width: 1cm;
+    display: inline;
+    margin-left: 38.5%;
+    margin-right: -38.5%;
 }
 
 /* Barras de avaliação */
@@ -432,3 +435,17 @@ fieldset.grupo .campo{
     margin-top: 13%
   
 }
+.tam{
+    width: 500px;
+    height: 450px;
+}
+.nota{
+    margin-left: 15%;
+}
+.avaliacao{
+    text-align: center;
+}
+.star{
+    margin-left: 35%;
+}
+h2{text-align: center;}

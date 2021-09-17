@@ -1,19 +1,3 @@
-<?php
-require('php\conexao.php');
-
-$pesq = (isset($_GET['s'])) ? mysql_real_escape_string($_GET['s']) : '';
-
-if(!empty($pesq)) {
-    $strSQL = "SELECT * FROM lojas WHERE nome_brecho LIKE '%$pesq%' OR localizacao LIKE '%$pesq%'";
-}
-else {
-  
-    $strSQL = "SELECT * FROM lojas ORDER BY id DESC";
-}
-$qr  = mysql_query($sql) or die(mysql_error());
-$num = mysql_num_rows($qr);
- 
-?>
 <!--- COLOCAR HTML DA PÁGINA DE RESULTADOS DE BUSCA -->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -73,75 +57,45 @@ $num = mysql_num_rows($qr);
 
 
     </head>
+    <br><br><br><br><br>
 
-    <body><br><br><br><br><br>
-        <?php
-if (!isset($_GET['nome_brecho'])) {
-	header("Location: index.html");
-	exit;
-}
+    <!-- sql vai aqui --!>
 
-$nome = "%".trim($_GET['nome_brecho'])."%";
+    <head>
+        <title>Resultado da busca</title>
+    </head>
 
-$dbh = new PDO('mysql:host=localhost;dbname=belchior', 'root', '');
+    <body>
+        <h2>Resultado da busca</h2>
 
-$sth = $dbh->prepare('SELECT * FROM `lojas` WHERE `nome_brecho` LIKE :nome');
-$sth->bindParam(':nome', $nome, PDO::PARAM_STR);
-$sth->execute();
-
-$resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
-?>c
-
-        <!DOCTYPE html>
-        <html>
-
-        <head>
-            <title>Resultado da busca</title>
-        </head>
-
-        <body>
-            <h2>Resultado da busca</h2>
-            <?php
-if (count($resultados)) {
-	foreach($resultados as $Resultado) {
-?>
-            <label><?php echo $Resultado['id']; ?> - <?php echo $Resultado['nome']; ?></label>
-            <br>
-            <?
-} } else {
-?>
-            <label>Não foram encontrados resultados pelo termo buscado.</label>
-            <?php
-}
-?>
-        </body>
-
-        </html>
-        <!-- Rodape -->
-        <div id="rodape">
-            <div class="d-flex">
-
-                <!-- Link para os termos de uso -->
-                <div class="me-auto">
-                    <h5><a class="nav-link active text-white pt-4" aria-current="page" href="termos_de_uso.html">Termos
-                            de uso</a></h5>
-                    <!-- Copyright -->
-                    <h6 class="text-white ms-3">Todos os direitos reservados aos criadores ©</h6>
-                </div>
-
-                <!-- Logo da UnB -->
-                <div>
-                    <img class="img-fluid" src="../img/logo-unb.png">
-                </div>
-
-            </div>
-        </div> <!-- Fim do rodape! -->
-
-        <!-- JavaScript Bundle with Popper (coisa pro bootstrap) -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-        </script>
     </body>
+
+
+    <!-- Rodape -->
+    <div id="rodape">
+        <div class="d-flex">
+
+            <!-- Link para os termos de uso -->
+            <div class="me-auto">
+                <h5><a class="nav-link active text-white pt-4" aria-current="page" href="termos_de_uso.html">Termos
+                        de uso</a></h5>
+                <!-- Copyright -->
+                <h6 class="text-white ms-3">Todos os direitos reservados aos criadores ©</h6>
+            </div>
+
+            <!-- Logo da UnB -->
+            <div>
+                <img class="img-fluid" src="../img/logo-unb.png">
+            </div>
+
+        </div>
+    </div> <!-- Fim do rodape! -->
+
+    <!-- JavaScript Bundle with Popper (coisa pro bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+</body>
 
 </html>
 

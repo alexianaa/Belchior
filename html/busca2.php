@@ -59,16 +59,51 @@
     </head>
     <br><br><br><br><br>
 
-    <!-- sql vai aqui --!>
 
     <head>
         <title>Resultado da busca</title>
     </head>
 
-    <body>
-        <h2>Resultado da busca</h2>
+    <h2>Resultado da busca</h2>
 
-    </body>
+    <?php 
+        $button = $_GET ['submit'];
+        $search = $_GET ['nome_brecho'];
+
+        // conexão 
+        $con=mysqli_connect("localhost","root","","belchior");
+
+            $sql = "SELECT * FROM lojas WHERE MATCH(NOME_BRECHO,LOCALIZACAO,LINK_SITE) AGAINST ('%" . $search . "%')";
+
+            $run = mysqli_query($con,$sql);
+            $foundnum = mysqli_num_rows($run);
+
+            if ($foundnum==0)
+            { 
+                echo "Nenhum resultado encontrado para '<b>$search</b>'. Tente outros termos!";
+            }
+            
+            else{
+                echo "<h1><strong> $foudnum resultado(s) encontrado(s) para \"" .$search."\" </strong></h1>";
+
+
+                // no de resultados
+                $sql = "SELECT * FROM lojas WHERE MATCH(NOME_BRECHO,LOCALIZACAO,LINK_SITE) AGAINST ('%" .$search. "%')";
+                $getquery = mysqli_query($con,$sql);
+
+                while($runrows = mysqli_fetch_array($getquery))
+                { 
+                    $buyLink = $runrows["LINK_SITE"];
+                    
+                    echo"<h5 class='card-title'>". $runrows["NOME_BRECHO"]. "</h5>";
+                    echo"<h5 class='card-title'>". $runrows["LOCALIZACAO"]. "</h5>";
+                }
+
+            }
+            mysqli_close($con);
+            ?>
+
+
 
 
     <!-- Rodape -->

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -52,6 +56,12 @@
             <h1>Cadastro de lojas</h1>
             <p style="margin-right: 20%;">Preencha o formulário abaixo com as informações da loja e do proprietário para adiciona-la ao site, antes de tudo não se esqueça de ler os nossos termos de uso.</p>
             <br>
+            <!-- Mensagens de resultado -->
+            <?php
+                if(isset($_SESSION['msg']))
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+            ?>
             <form id="formulario-cadastro" method="post" action="../php/registrar_form_cadastro.php">
                 <div id="inf-pessoais">
                     <h4>Informações Pessoais</h4>
@@ -59,20 +69,26 @@
                         <label for="nome">Nome completo:</label>
                         <input type="text" name="nome" id="nome" required>
                     </div>
-    
+
                     <div class="campo">
                         <label for="email">E-mail:</label>
                         <input type="email" name="email" id="email" required>
                     </div>
-    
+
                     <div class="campo">
                         <label for="telefone">Telefone:</label>
                         <input type="tel" name="telefone" id="telefone" required> 
                     </div>
                 </div>
-    
+
                 <div id="inf-lojas">
                     <h4>Informações da loja</h4>
+
+                    <div class="campo">
+                        <label for="nome">Nome da loja</label>
+                        <input type="text" name="nome_loja" id="nome_loja" required>
+                    </div>
+
                     <div class="campo">
                         <label>Selecione o tipo de loja:</label>
                         <label> <input type="radio" name="tipo" value="fisica" checked>Física </label>
@@ -112,29 +128,37 @@
                             <option>Tocantins</option>
                         </select>
                     </div>
-    
+
+                    <div class="campo">
+                        <label for="nome">Complemento da localização</label>
+                        <input type="text" name="localizacao" id="localizacao" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nome">Link para site</label>
+                        <input type="text" name="link" id="link" required>
+                    </div>
+
                     <div id="check">
                         <label>Selecione o tipo de produto que a loja vende:</label> <br><br>
                         <input type="checkbox" id="produto1" name="produto1" value="Roupas">
                         <label for="produto1">Roupas</label>
                         <br>
-                        <input type="checkbox" id="produto1" name="produto2" value="Acessorios">
+                        <input type="checkbox" id="produto2" name="produto2" value="Acessorios">
                         <label for="produto2">Acessórios</label>
                         <br>
-                        <input type="checkbox" id="produto1" name="produto3" value="Sapatos">
+                        <input type="checkbox" id="produto3" name="produto3" value="Sapatos">
                         <label for="produto3">Sapatos</label>
+                        <br>
+                        <input type="checkbox" id="produto4" name="produto4" value="Moveis">
+                        <label for="produto4">Móveis</label>
                     </div>
                 </div>
-    
+
                 <div style="margin-bottom: 2em; font-size: 0.5cm;">
                     <input type="checkbox" id="termosdeuso" name="termos-de-uso" value="termos-de-uso" required>
                     <label>Aceito os termos de uso</label>
                 </div>
-
-                <!-- Mensagens de resultado -->
-                <?php if (isset($_GET['submit']) && $_GET['submit'] == 'sucesso') { ?>
-                    <div class="text-success">Formulário de cadastro enviado!</div>
-                <?php }; ?>
 
                 <button type="submit" class="botao">Concluído</button>
             </form>

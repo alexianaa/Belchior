@@ -179,7 +179,6 @@ session_start();
                 <div>
                     <img class="img-fluid" src="../img/logo-unb.png">
                 </div>
-                <a href="adm_page.php">PÁGINA DOS ADM</a>
             </div>
         </div> <!-- Fim do rodape! -->
     

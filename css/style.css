@@ -29,7 +29,7 @@ body {
     border-bottom: 1px solid #DE6E4B;
 }
 
-#mainNav .nav-link:hover, .active {
+#mainNav .nav-link:hover, #mainNav .active {
     font-weight: bold;
     color: black !important;
     border-bottom: 1px solid black !important;
@@ -49,7 +49,6 @@ body {
 #sobre p {
     font-size: large;
     margin-bottom: 4.5%;
-    
 }
 
 /* NOSSAS FOTOS */
@@ -364,7 +363,7 @@ body {
     margin-right: 10em;
 }
 
-#inf-lojas{
+#inf-lojas {
     border: 1px solid ;
     border-radius: 5px;
     border-color: #E56399;
@@ -373,45 +372,45 @@ body {
     margin-right: 10em;
 }
 
-fieldset{
+fieldset {
     border: 0;
 }
 
-input, select, button{
+input, select, button {
     border-radius: 5px;
 }
 
-.campo{
+.campo {
     margin-bottom: 1em;
     font-family: Trocchi;
 }
 
-.campo label{
+.campo label {
     margin-bottom: 0.2em;
     display: block;
 }
 
-fieldset.grupo .campo{
+fieldset.grupo .campo {
     float: left;
     margin-right: 1em;
 }
 
-.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select{
+.campo input[type="text"], .campo input[type="email"], .campo input[type="tel"], .campo select {
     padding: 0.2em;
     border: 1px solid;
     box-shadow: 2px 2px 2px #E56399;
     display: block;
 }
 
-.campo select option{
+.campo select option {
     padding-right: 1em;
 }
 
-.campo input:focus, .campo select:focus{
+.campo input:focus, .campo select:focus {
     background: #E5D4CE;
 }
 
-.botao{
+.botao {
     font-size: 1.2em;
     background: #7FD1B9;
     padding: 0.3em;
@@ -419,33 +418,40 @@ fieldset.grupo .campo{
     margin-right: 9em;
 }
 
-.botao:hover{
+.botao:hover {
     background: #beffeb;
 }
 
-.nav-link active text-white{
+.nav-link active text-white {
     font-size:xx-large;
     font-weight: 900;
 }
-.img-fluid{
+.img-fluid {
     margin-left: 4%;
     margin-top: 5%;
 }
-.copy{
+.copy {
     margin-top: 13%
   
 }
-.tam{
+.tam {
     width: 500px;
     height: 450px;
 }
-.nota{
+.nota {
     margin-left: 15%;
 }
-.avaliacao{
+.avaliacao {
     text-align: center;
 }
-.star{
+.star {
     margin-left: 35%;
 }
-h2{text-align: center;}
+h2 {
+    text-align: center;
+}
+
+/* CAIXA DE BUSCA */
+#divBusca form {
+    height: 30px;
+}

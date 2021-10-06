@@ -440,7 +440,7 @@ fieldset.grupo .campo {
 }
 .nota {
     width: 800px;
-    height: 550px;
+    height: 570px;
     margin-left: 25%;
 }
 .avaliacao {
@@ -465,10 +465,10 @@ h2 {
 #textarea {
     padding: 10px;
     max-width: 100%;
-    line-height: 1.5;
+    line-height: 1;
     border-radius: 5px;
-    border: 2px solid #7FD1B9;
-    box-shadow: 1px 1px 1px #7FD1B9;
+    border: 2px solid #0d0e0d;
+    box-shadow: 1px 1px 1px #050505;
 }
 
 .label {

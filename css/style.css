@@ -439,6 +439,8 @@ fieldset.grupo .campo {
     height: 450px;
 }
 .nota {
+    width: 500px;
+    height: 500px;
     margin-left: 15%;
 }
 .avaliacao {

@@ -439,15 +439,15 @@ fieldset.grupo .campo {
     height: 450px;
 }
 .nota {
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 550px;
     margin-left: 15%;
 }
 .avaliacao {
     text-align: center;
 }
 .star {
-    margin-left: 35%;
+    margin-left: 5%;
 }
 h2 {
     text-align: center;
@@ -466,7 +466,7 @@ h2 {
     max-width: 100%;
     line-height: 1.5;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #7FD1B9;
     box-shadow: 1px 1px 1px #999;
 }
 

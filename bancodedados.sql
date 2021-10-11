@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `belchior` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `belchior`;
 -- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: belchior
@@ -18,33 +16,38 @@ USE `belchior`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `lojas`
+-- Table structure for table `cadastro`
 --
 
-DROP TABLE IF EXISTS `lojas`;
+DROP TABLE IF EXISTS `cadastro`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `lojas` (
+CREATE TABLE `cadastro` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nome_brecho` varchar(50) NOT NULL,
-  `localizacao` varchar(500) DEFAULT NULL,
-  `avaliacao` float DEFAULT NULL,
-  `horario` time DEFAULT NULL,
-  `produtos` set('R','M','A','C') DEFAULT NULL,
-  `contato` int DEFAULT NULL,
-  `link_site` varchar(100) DEFAULT NULL,
+  `nome` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(13) NOT NULL,
+  `nome_loja` varchar(100) NOT NULL,
+  `formato_loja` set('Fisica','Online','Hibrida') DEFAULT NULL,
+  `produtos` varchar(100) DEFAULT NULL,
+  `cidade` varchar(20) DEFAULT NULL,
+  `estado` varchar(30) DEFAULT NULL,
+  `horario` varchar(100) DEFAULT NULL,
+  `rua` varchar(50) DEFAULT NULL,
+  `complemento` varchar(50) DEFAULT NULL,
+  `link` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `lojas`
+-- Dumping data for table `cadastro`
 --
 
-LOCK TABLES `lojas` WRITE;
-/*!40000 ALTER TABLE `lojas` DISABLE KEYS */;
-INSERT INTO `lojas` VALUES (1,'Sonho Brechó',NULL,NULL,NULL,'R,A,C',NULL,'https://www.instagram.com/sonho_brecho/'),(2,'Ai, Que Lindo!',NULL,NULL,NULL,'R,A,C',NULL,'https://www.instagram.com/aiquelindo.brecho/'),(3,'Uzzadesapego ','https://www.google.com.br/maps?hl=pt-br&sxsrf=ALeKk01wvAx09yC95FPF8_risa-SurBA8g:1629161339924&gsas=1&client=safari&lsig=AB86z5XTgQ_Dl25-D7QJ7Zbsxmk5&kgs=e4111db9904b67cd&shndl=-1&entrypoint=sh/x/kp/local&q=RUA.+Jos%C3%A9+Brito+Lisboa,+60+-+Tabuleiro+do+Martins&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjVlOXYx4',NULL,NULL,'R,A,C',NULL,' https://www.instagram.com/uzzadesapego/'),(5,'bsb.brecho','Rua 25 sul lote 11',NULL,NULL,'R,A,C',NULL,'https://instagram.com/bsb.brecho?utm_medium=copy_link'),(6,'BrechóMMix',NULL,NULL,NULL,'R,M,A,C',NULL,'https://instagram.com/brechommix?utm_medium=copy_link'),(7,'Frôzinha Brechó',NULL,NULL,NULL,'R,A,C',NULL,'http://www.instagram.com/frozinha.brecho'),(8,'Brechoanate',NULL,NULL,NULL,'R,A,C',NULL,'https://instagram.com/brechoanate?utm_medium=copy_link'),(9,'AMARELO brechó',NULL,NULL,NULL,'R,A,C',NULL,'https://www.instagram.com/amareloxbrecho'),(10,'Brechó Ki Achado ',NULL,NULL,NULL,'R',NULL,'https://www.instagram.com/brecho_ki_achado/?hl=pt-br'),(11,'To Face Brechó',NULL,NULL,NULL,'R,A,C',NULL,'http://www.instagram.com/toface.brecho');
-/*!40000 ALTER TABLE `lojas` ENABLE KEYS */;
+LOCK TABLES `cadastro` WRITE;
+/*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
+INSERT INTO `cadastro` VALUES (1,'Alexia Cardoso','alexiasilvacardoso@gmail.com','82988494263','Solarium','Fisica','','Sexta a Sábado, das ','Alagoas','Alagoas','Rua do Sol','Nº 45, ao lado da farmacia','https://www.instagram.com/alexiansc_/');
+/*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -56,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-16 14:31:01
+-- Dump completed on 2021-10-11 19:50:23

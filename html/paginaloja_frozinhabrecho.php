@@ -79,7 +79,7 @@
 
                     <!-- Foto principal da loja -->
                     <div class="col-sm-6">
-                        <img src="../img/frozinha_brecho/frozinha1.jpeg"  class="img-fluid tam" style="min-width: 200px;">
+                        <img src="../img/frozinha_brecho/frozinha1.jpeg" class="img-fluid tam" style="min-width: 200px;">
                     </div>
 
                     <!-- Contatos e links -->
@@ -97,7 +97,6 @@
                             <li><h5>Todos os dias</h5></li>
                             <li><h5>10:00 - 22:00</h5></li>
                         </ul>
-
                     </div>
                 </div>
 
@@ -227,6 +226,7 @@
                     </div>
                 </div>
 
+                <!-- Feedback -->
                 <div class="row justify-content-center mt-4">
                     <div class="col text-center" style="min-width: 150px; max-width: 700px;">
                         <h3 class="pb-2">Feedback:</h3>
@@ -252,7 +252,6 @@
 
                         <?php } ?>
                     </div>
-
                 </div>
                 
             </div>
@@ -301,7 +300,7 @@
                 <div class="me-auto">
                     <h5><a class="nav-link active text-white pt-4" aria-current="page" href="termos_de_uso.html">Termos de uso</a></h5>
                     <!-- Copyright -->
-                    <h6 class="text-white ms-3">Todos os direitos reservados aos criadores ©</h6>
+                    <h6 class="text-white ms-3">Todos os direitos reservados ©</h6>
                 </div>
 
                 <!-- Logo da UnB -->

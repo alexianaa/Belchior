@@ -1,22 +1,22 @@
-<?php
-require('conexao.php');
- 
+<?php // AJUSTAR CONEXÃO DE DADOS E COMENTÁRIOS
+    require('conexao.php');
+    
 
-$id = (isset($_GET['id'])) ? intval($_GET['id']) : 0;
+    $id = (isset($_GET['id'])) ? intval($_GET['id']) : 0;
 
-if($id == 0){
-    header('location:index.html');
-}
-$sql = "SELECT * FROM lojas WHERE id = '$id";
- 
+    if($id == 0){
+        header('location:index.html');
+    }
+    $sql = "SELECT * FROM lojas WHERE id = '$id";
+    
 
-$qr  = mysql_query($sql) or die(mysql_error());
- 
+    $qr  = mysql_query($sql) or die(mysql_error());
+    
 
-$ln = mysql_fetch_assoc($qr);
- 
+    $ln = mysql_fetch_assoc($qr);
+    
 
-$titulo = $ln['nome_brecho'];
+    $titulo = $ln['nome_brecho'];
  
 ?>
 
@@ -77,43 +77,59 @@ $titulo = $ln['nome_brecho'];
         
             <!-- Imagem e rating -->
             <div class="container">
-                <div class="">
-                    <h1 class="nome-loja"><?php echo $nome_brecho ?></h1>
-                </div>
+                <div class="row align-items-center">
+                    <div>
+                        <h1 class="nome-loja"><?php echo $nome_brecho ?></h1>
+                    </div>
+
                     <!-- Foto principal da loja -->
-                <div class="row">
-                    <div class="col-7">
-                        <img src="../img/foto.png" class="img-fluid">
+                    <div class="col-sm-6">
+                        <img src="../img/foto.png" class="img-fluid tam" style="min-width: 200px;">
                     </div>
-                    <div class="col-5">
-                        <h2>Localização:</h2>
-                        <div style="border: 2px solid rgba(127, 209, 185, 1);">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30719.66597683526!2d-47.84938210932007!3d-15.75334788103361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zYnJlY2jDsw!5e0!3m2!1spt-BR!2sbr!4v1628535576889!5m2!1spt-BR!2sbr" width="100%" height="240px" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+
+                    <!-- Contatos e links -->
+                    <div class="col-sm-4">
+                        <br>
+
+                        <h3 class="pt-5 pb-3">Contato:</h3>
+                        <ul>
+                            <li><h5>Instagram: <a class="nav-link active" href="" style="color: #E56399;">nomedoinsta</a></h5></li>
+                        </ul>
+
+                        <h3 class="pt-3 pb-3">Horário de funcionamento:</h3>
+                        <br>
+                        <ul>
+                            <li><h5>Dias</h5></li>
+                            <li><h5>Horas</h5></li>
+                        </ul>
                     </div>
                 </div>
-                <!-- Avaliação brechó -->
-                <div class="row">
-                    <div class="col-7 espaço-colunas">
-                        <h2 id="rating">Avaliação: 0</h2>
+            </div>
+
+            <!-- Avaliação brechó -->
+            <div class="container">
+                <div class="row align-items-evenly mt-5">
+
+                    <div class="col-sm-5 me-5">
+                        <h2 id="rating">Avaliação: </h2>
                         
-                        <a href="javascript:void(0)" onclick="Avaliar(1)">
+                        <a href="javascript:void(0)" onclick="Avaliar(1)" >
                         <img class="estrelas" src="../img/star0.png" id="s1"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(2)">
+                        <a href="javascript:void(0)" onclick="Avaliar(2)" >
                         <img class="estrelas" src="../img/star0.png" id="s2"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(3)">
+                        <a href="javascript:void(0)" onclick="Avaliar(3)" >
                         <img class="estrelas" src="../img/star0.png" id="s3"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(4)">
+                        <a href="javascript:void(0)" onclick="Avaliar(4)" >
                         <img class="estrelas" src="../img/star0.png" id="s4"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(5)">
+                        <a href="javascript:void(0)" onclick="Avaliar(5)" >
                         <img class="estrelas" src="../img/star0.png" id="s5"></a>
-                        
-                    </span>
-                    <p></p>
+
+                        <br>
+                        <br>
 
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -128,7 +144,7 @@ $titulo = $ln['nome_brecho'];
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-5"></div>
+                                    <div class="bar-5"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -141,7 +157,7 @@ $titulo = $ln['nome_brecho'];
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-4"></div>
+                                    <div class="bar-4"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -154,7 +170,7 @@ $titulo = $ln['nome_brecho'];
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-3"></div>
+                                    <div class="bar-3"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -167,7 +183,7 @@ $titulo = $ln['nome_brecho'];
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-2"></div>
+                                    <div class="bar-2"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -180,26 +196,68 @@ $titulo = $ln['nome_brecho'];
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-1"></div>
+                                    <div class="bar-1"></div>
                                 </div>
                             </div>
                             <div class="side right">
                                 <div>20</div>
                             </div>
                         </div>
-                        <span><h2 class="mt-5">Fotos:</h2></span>
-                    </div>
-                    <div class="col-5"><br>
-                        <h3 class="funcionamento">Contato:</h3>
-                        <h3>(99) 99999-9999</h3>
-                        <h3 class="funcionamento">Horário de funcionamento:</h3>
                         <br>
-                        <ul>
-                            <li><h5>segunda à sexta</h5></li>
-                            <li><h5>9:00 - 17:00</h5></li>
-                        </ul>
+                        <br>
+                    </div>
+
+                    <!-- Comentários -->
+                    <div class="col-sm-4 text-center ms-2">
+                        <h3>Comente!</h3>
+
+                        <form method="post" action="../php/registrar_comentarios.php" class="pt-5">
+                            <div class="d-none form-group">
+                                <input name="id" type="text" class="form-control" placeholder="1">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <input name="nome" type="text" class="form-control" placeholder="Nome">
+                            </div>
+                                
+                            <div class="form-group">
+                                <textarea name="descricao" class="form-control mt-1" placeholder="Descrição" rows="3"></textarea>
+                            </div>
+
+                            <button style="width: 90px; height: 40px; border: 2px solid black;" class="mt-3 botao ms-5 me-5" type="submit">Enviar</button>
+                        </form>
+                        
                     </div>
                 </div>
+
+                <!-- Feedback -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col text-center" style="min-width: 150px; max-width: 700px;">
+                        <h3 class="pb-2">Feedback:</h3>
+                        <?php foreach ($comentario as $lines) { ?>
+                        
+                        <!-- Formatando o arquivo com comentários -->
+                        <?php
+                            // organizando inputs dos usuários
+                            $conteudo = explode('/', $lines);
+
+                            if (count($conteudo) < 3) {
+                                continue;
+                            };
+                        ?>
+                    
+                        <!-- Mostrar comentários -->
+                        <div class="card mb-4 bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $conteudo[1] ?></h5>
+                            <p class="card-text"><?php echo $conteudo[2] ?></p>
+                        </div>
+                        </div>
+
+                        <?php } ?>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- Mais imagens da loja -->

@@ -51,23 +51,34 @@
         <!-- Corpo da página -->
         <div id="conteudo" class="pt-5 pb-5">
 
-            <!-- Caixa de busca -->
-            <br>
-        
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-<div id="divBusca">
+            <div class="container-fluid">
+                <div class="row">
 
-    <form action="busca2.php" method="GET">
-		<input type="text" name="nome_brecho" size="25" placeholder="Encontre o brechó ideal" style="background-color:#7FD1B9" aria-label="buscar" required>
+                    <!-- Título Destaque -->
+                    <div class="col-md-3">
+                        <h1>Destaques:</h1>
+                    </div>
 
-		<input type="submit" value="Buscar" name="submit" style="background-color:#7FD1B9 ; width:60px;"></input>
-        
-	</form>
-    
-</div>
-<br> 
+                    <!-- Caixa de busca -->
+                    <div class="col-5 ms-auto">
+
+                        <meta name="viewport" content="width=device-width, user-scalable=no">
+                        <div id="divBusca" style="text-align: end;" class="pt-3">
+                            <form action="busca2.php" method="GET">
+                                <input type="text" name="nome_brecho" size="23" placeholder="Encontre o brechó ideal" aria-label="buscar" style="height: 30px; padding-left: 2%; border: 2px solid black;" required>
+                                <input type="submit" value="Buscar" name="submit" style="border: 2px solid black; background-color: #DE6E4B; height: 30px; width: 70px;"></input>                        
+                            </form>  
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+
             <!-- Lojas em destaque -->
-            <div id="carouselPagLoja" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div id="carouselPagLoja" class="carousel carousel-dark slide pt-5" data-bs-ride="carousel">
 
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselPagLoja" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -82,24 +93,24 @@
                                 <img src="../img/Sonho-Brecho/Sonho-Brecho-img1.jpeg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Sonho Brechó</h5>
-                                    <p class="card-text">streetstyle ✦ vintage ✦ style</p>
-                                    <a id="botao" href="paginaloja_sonho_brecho.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">streetstyle - vintage - style</p>
+                                    <a id="botao" href="paginaloja_sonho_brecho.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                             <div id="CardLoja" class="card  d-none d-md-block ms-4">
                                 <img src="../img/frozinha_brecho/frozinha1.jpeg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Frôzinha Brechó</h5>
-                                    <p class="card-text">brechó on-line • DF ♡</p>
-                                    <a id="botao" href="paginaloja_frozinhabrecho.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Brechó on-line, DF ♡</p>
+                                    <a id="botao" href="paginaloja_frozinhabrecho.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                             <div id="CardLoja" class="card d-none d-xl-block ms-4">
                                 <img src="../img/Brechoanate/brechoanate1.jpeg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">BrechóAnatê</h5>
-                                    <p class="card-text">Enviamos para todo o Brasil💫</p>
-                                    <a id="botao" href="paginaloja_brechoanate.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Enviamos para todo o Brasil</p>
+                                    <a id="botao" href="paginaloja_brechoanate.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                         </div>
@@ -111,24 +122,24 @@
                                 <img src="../img/brecho_ki_achado/ki_achado1.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Brechó Ki Achado</h5>
-                                    <p class="card-text">Vista mudança para um futuro melhor🌍</p>
-                                    <a id="botao" href="paginaloja_brechokiachado.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Vista mudança para o futuro!</p>
+                                    <a id="botao" href="paginaloja_brechokiachado.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                             <div id="CardLoja" class="card  d-none d-md-block ms-4">
                                 <img src="../img/brecho_ai_que_lindo/ai_que_lindo.jpg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Brechó Aí, que Lindo!</h5>
-                                    <p class="card-text">✨ Que lindo esse brechó!</p>
-                                    <a id="botao" href="paginaloja_brechoAiquelindo.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Que lindo esse brechó!</p>
+                                    <a id="botao" href="paginaloja_brechoAiquelindo.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                             <div id="CardLoja" class="card d-none d-xl-block ms-4">
                                 <img src="../img/uzzadesapego/uzzadesapego.jpeg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Uzza Desapego</h5>
-                                    <p class="card-text">Pode se apegar sem medo 🖤</p>
-                                    <a id="botao" href="paginaloja_uzzadesapego.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Pode se apegar sem medo!</p>
+                                    <a id="botao" href="paginaloja_uzzadesapego.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                         </div>
@@ -139,24 +150,24 @@
                                 <img src="../img/bsb.brecho/bsb.brecho.jpeg" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Bsb Brechó</h5>
-                                    <p class="card-text">👗Peças novas e semi novas</p>
-                                    <a id="botao" href="paginaloja_bsb.brecho.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Peças novas e semi novas</p>
+                                    <a id="botao" href="paginaloja_bsb.brecho.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                             <div id="CardLoja" class="card  d-none d-md-block ms-4">
                                 <img src="../img/brecho_mmix/brechommix1.png" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Brechó MMix</h5>
-                                    <p class="card-text">Vamos reusar, trocar e doar. O planeta Terra agradece!</p>
-                                    <a id="botao" href="paginaloja_brechommix.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Reutilize, troque, doe!</p>
+                                    <a id="botao" href="paginaloja_brechommix.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                             <div id="CardLoja" class="card d-none d-xl-block ms-4">
                                 <img src="../img/amarelo_brecho/amarelo_brecho1.png" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">Amarelo Brechó</h5>
-                                    <p class="card-text">🌎 Consumo consciente</p>
-                                    <a id="botao" href="paginaloja_amarelobrecho.html" class="btn">Saiba mais!</a>
+                                    <p class="card-text">Consumo consciente? Vem!</p>
+                                    <a id="botao" href="paginaloja_amarelobrecho.php" class="btn">Saiba mais!</a>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +198,7 @@
                 <div class="me-auto">
                     <h5><a class="nav-link active text-white pt-4" aria-current="page" href="termos_de_uso.html">Termos de uso</a></h5>
                     <!-- Copyright -->
-                    <h6 class="text-white ms-3">Todos os direitos reservados aos criadores ©</h6>
+                    <h6 class="text-white ms-3">Todos os direitos reservados ©</h6>
                 </div>
 
                 <!-- Logo da UnB -->

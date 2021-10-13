@@ -1,3 +1,18 @@
+<?php
+
+    // lendo arquivo
+    $arquivo = fopen('../php/comentarios.txt', 'r');
+
+    while (!feof($arquivo)) {
+    $registros = fgets($arquivo);
+    $comentario[] = $registros;
+    }
+
+    // fechando arquivo
+    fclose($arquivo);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -54,33 +69,39 @@
 
             <!-- Imagem e rating -->
             <div class="container">
-                <div class="">
-                    <h1 class="nome-loja">Uzzadesapego</h1>
-                </div>
-                    <!-- Foto principal da loja -->
-                <div class="row">
-                    <div class="col-7">
-                        <img src="../img/uzzadesapego/uzzadesapego.jpeg"  class="tam">
-                        <h3>                                                              </h3>
-                        <h3>                                                              </h3>
-                        <h3>                                                              </h3>
+                <div class="row align-items-center">
+                    <div>
+                        <h1 class="nome-loja">Bsb.brechó</h1>
                     </div>
-               <!-- Contatos e links -->
-                <div class="col-5"><br>
-                    <h3 class="funcionamento">Contato:</h3>
-                    <h3>(82) 99934-5407</h3>
-                    <h3><a class="nav-link active text-black pt-4" aria-current="page" href=https://www.instagram.com/uzzadesapego/>Instagram: @uzzadesapego</a></h3>
-                    <h3 class="funcionamento">Horário de funcionamento:</h3>
-                    <br>
-                    <ul>
-                        <li><h5>8hrs às 22:00hrs</h5></li>
-                    </ul>
-                </div>
+                    <!-- Foto principal da loja -->
+                    <div class="col-sm-6">
+                        <img src="../img/bsb.brecho/bsb.brecho.jpeg" class="img-fluid tam" style="min-width: 200px;">
+                    </div>
+
+                    <!-- Contatos e links -->
+                    <div class="col-sm-4">
+                        <br>
+
+                        <h3 class="pt-5 pb-3">Contato:</h3>
+                        <ul>
+                            <li><h5>Instagram: <a class="nav-link active" href="https://www.instagram.com/bsb.brecho" style="color: #E56399;">@bsb.brecho</a></h5></li>
+                        </ul>
+
+                        <h3 class="pt-3 pb-3">Horário de funcionamento:</h3>
+                        <br>
+                        <ul>
+                            <li><h5>Segunda-feira ao Sábado</h5></li>
+                        </ul>
+
+                    </div>
             </div>
-                <!-- Avaliação brechó -->
-                <div class="nota">
-                    <div class="col-15 espaço-colunas">
-                        <h2 id="rating">Avaliação: 0</h2>
+
+            <!-- Avaliação brechó -->
+            <div class="container">
+                <div class="row align-items-evenly mt-5">
+
+                    <div class="col-sm-5 me-5">
+                        <h2 id="rating">Avaliação: </h2>
                         
                         <a href="javascript:void(0)" onclick="Avaliar(1)" >
                         <img class="estrelas" src="../img/star0.png" id="s1"></a>
@@ -96,9 +117,9 @@
                                 
                         <a href="javascript:void(0)" onclick="Avaliar(5)" >
                         <img class="estrelas" src="../img/star0.png" id="s5"></a>
-                        
-                    </span>
-                    <p></p>
+
+                        <br>
+                        <br>
 
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -113,7 +134,7 @@
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-5"></div>
+                                    <div class="bar-5"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -126,7 +147,7 @@
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-4"></div>
+                                    <div class="bar-4"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -139,7 +160,7 @@
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-3"></div>
+                                    <div class="bar-3"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -152,7 +173,7 @@
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-2"></div>
+                                    <div class="bar-2"></div>
                                 </div>
                             </div>
                             <div class="side right">
@@ -165,16 +186,68 @@
                             </div>
                             <div class="middle">
                                 <div class="bar-container">
-                                <div class="bar-1"></div>
+                                    <div class="bar-1"></div>
                                 </div>
                             </div>
                             <div class="side right">
                                 <div>20</div>
                             </div>
                         </div>
-                        <span><h2 class="mt-5">Fotos:</h2></span>
+                        <br>
+                        <br>
+                    </div>
+
+                    <!-- Comentários -->
+                    <div class="col-sm-4 text-center ms-2">
+                        <h3>Comente!</h3>
+
+                        <form method="post" action="../php/registrar_comentarios.php" class="pt-5">
+                            <div class="d-none form-group">
+                                <input name="id" type="text" class="form-control" placeholder="1">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <input name="nome" type="text" class="form-control" placeholder="Nome">
+                            </div>
+                                
+                            <div class="form-group">
+                                <textarea name="descricao" class="form-control mt-1" placeholder="Descrição" rows="3"></textarea>
+                            </div>
+
+                            <button style="width: 90px; height: 40px; border: 2px solid black;" class="mt-3 botao ms-5 me-5" type="submit">Enviar</button>
+                        </form>
+                        
                     </div>
                 </div>
+
+                <!-- Feedback -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col text-center" style="min-width: 150px; max-width: 700px;">
+                        <h3 class="pb-2">Feedback:</h3>
+                        <?php foreach ($comentario as $lines) { ?>
+                        
+                        <!-- Formatando o arquivo com comentários -->
+                        <?php
+                            // organizando inputs dos usuários
+                            $conteudo = explode('/', $lines);
+
+                            if (count($conteudo) < 3) {
+                                continue;
+                            };
+                        ?>
+                    
+                        <!-- Mostrar comentários -->
+                        <div class="card mb-4 bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $conteudo[1] ?></h5>
+                            <p class="card-text"><?php echo $conteudo[2] ?></p>
+                        </div>
+                        </div>
+
+                        <?php } ?>
+                    </div>
+                </div>
+                
             </div>
 
             <!-- Mais imagens da loja -->
@@ -186,14 +259,14 @@
                     </div>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="../img/uzzadesapego/1.jpg" class="d-inline-block img-paginaloja" alt="...">
-                        <img src="../img/uzzadesapego/3.jpg" class="d-none d-md-inline-block img-paginaloja" alt="...">
-                        <img src="../img/uzzadesapego/2.jpg" class="d-none d-md-inline-block img-paginaloja" alt="...">
+                        <img src="../img/bsb.brecho/Sem título.jpg" class="d-inline-block img-paginaloja" alt="...">
+                        <img src="../img/bsb.brecho/3.jpg" class="d-none d-md-inline-block img-paginaloja" alt="...">
+                        <img src="../img/bsb.brecho/2.jpg" class="d-none d-md-inline-block img-paginaloja" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="../img/uzzadesapego/5.jpg" class="d-inline-block img-paginaloja" alt="...">
-                        <img src="../img/uzzadesapego/4.jpg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
-                        <img src="../img/uzzadesapego/6.jpg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
+                        <img src="../img/bsb.brecho/4.jpg" class="d-inline-block img-paginaloja" alt="...">
+                        <img src="../img/bsb.brecho/5.jpg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
+                        <img src="../img/bsb.brecho/6.jpg" class="d-none d-lg-inline-block img-paginaloja" alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselPagLoja" data-bs-slide="prev">
@@ -216,7 +289,7 @@
                 <div class="me-auto">
                     <h5><a class="nav-link active text-white pt-4" aria-current="page" href="termos_de_uso.html">Termos de uso</a></h5>
                     <!-- Copyright -->
-                    <h6 class="text-white ms-3">Todos os direitos reservados aos criadores ©</h6>
+                    <h6 class="text-white ms-3">Todos os direitos reservados ©</h6>
                 </div>
 
                 <!-- Logo da UnB -->

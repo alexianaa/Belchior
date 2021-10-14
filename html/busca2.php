@@ -1,4 +1,7 @@
-<!--- COLOCAR HTML DA PÁGINA DE RESULTADOS DE BUSCA -->
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -53,44 +56,32 @@
             </nav>
         </div><!-- Fim do topo da página! -->
 
-        <br><br>
-        <div id="conteudo">
-            <h2 class="mt-5">Resultado da busca</h2>
+        <?php
+            //conexao banco
+            $host = 'localhost';
+            $user = 'root';
+            $pass = '';
+            $bd   = 'belchior';
 
-            <?php 
-                $button = $_GET ['submit'];
-                $search = $_GET ['nome_brecho'];
+            $conectar = mysqli_connect( $host, $user, $pass, $bd);
 
-                // conexão 
-                $con=mysqli_connect("localhost","root","","belchior");
+            //checar conexao
+            if (mysqli_connect_errno()) {
+                printf("Connect failed: %s\n", mysqli_connect_error());
+                exit();
+            }
 
-                $sql = "SELECT * FROM lojas WHERE MATCH(NOME_BRECHO,LOCALIZACAO,LINK_SITE) AGAINST ('%" . $search . "%')";
+            //resultado de busca
+            $nome_brecho = $_POST['nome_brecho'];
+            $query = "SELECT * FROM cadastro WHERE nome_loja LIKE '%$nome_brecho%' LIMIT 5";
+            $result = mysqli_query($conectar, $query) or die(mysqli_error($conectar));;
 
-                $run = mysqli_query($con,$sql);
-                $foundnum = mysqli_num_rows($run);
+            while( $row = mysqli_fetch_array($result) ){
 
-                if ($foundnum==0) { 
-                    echo "Nenhum resultado encontrado para '<b>$search</b>'. Tente outros termos!";
-                }
-                    
-                else {
-                    echo "<h1><strong> $foudnum resultado(s) encontrado(s) para \"" .$search."\" </strong></h1>";
+            echo "Resultado de busca: " . $row['nome_loja'] . "<br>";
 
-                    // no de resultados
-                    $sql = "SELECT * FROM lojas WHERE MATCH(NOME_BRECHO,LOCALIZACAO,LINK_SITE) AGAINST ('%" .$search. "%')";
-                    $getquery = mysqli_query($con,$sql);
-
-                    while($runrows = mysqli_fetch_array($getquery)) { 
-                        $buyLink = $runrows["LINK_SITE"];
-                            
-                        echo"<h5 class='card-title'>". $runrows["NOME_BRECHO"]. "</h5>";
-                        echo"<h5 class='card-title'>". $runrows["LOCALIZACAO"]. "</h5>";
-                    }
-
-                }
-                mysqli_close($con);
-            ?>
-        </div>
+            }
+        ?>
 
         <!-- Rodape -->
         <div id="rodape">
@@ -115,6 +106,3 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     </body>
 </html>
-
-
-?>

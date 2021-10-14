@@ -22,14 +22,14 @@
             <!-- Barra de navegação com menu responsivo --> 
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <!-- Logo -->
-                <a class="d-inline" href="index.html"><img src="../img/logo.png"></a>
+                <a class="d-inline" href="index.php"><img src="../img/logo.png"></a>
                 <!-- Menu compactado (aparece em telas pequenas) -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <!-- Navegação (páginas e seus links) -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item me-2">
-                            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active text-white" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item me-2">
                             <a class="nav-link text-white" href="sobre.html">Sobre</a>
@@ -64,7 +64,7 @@
 
                         <meta name="viewport" content="width=device-width, user-scalable=no">
                         <div id="divBusca" style="text-align: end;" class="pt-3">
-                            <form action="busca2.php" method="GET">
+                            <form action="busca2.php" method="post">
                                 <input type="text" name="nome_brecho" size="23" placeholder="Encontre o brechó ideal" aria-label="buscar" style="height: 30px; padding-left: 2%; border: 2px solid black;" required>
                                 <input type="submit" value="Buscar" name="submit" style="border: 2px solid black; background-color: #DE6E4B; height: 30px; width: 70px;"></input>                        
                             </form>  

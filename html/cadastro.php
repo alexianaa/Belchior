@@ -26,14 +26,14 @@ session_start();
             <!-- Barra de navegação com menu responsivo --> 
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <!-- Logo -->
-                <a class="d-inline" href="index.html"><img src="../img/logo.png"></a>
+                <a class="d-inline" href="index.php"><img src="../img/logo.png"></a>
                 <!-- Menu compactado (aparece em telas pequenas) -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <!-- Navegação (páginas e seus links) -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item me-2">
-                            <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link text-white" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item me-2">
                             <a class="nav-link text-white" href="sobre.html">Sobre</a>
@@ -63,7 +63,7 @@ session_start();
                     unset($_SESSION['msg']);
             ?>
 
-            <form id="formulario-cadastro" method="post" action="../php/registrar_form_cadastro.php">
+            <form id="formulario-cadastro" method="post" action="../php/conexao.php">
                 <div id="inf-pessoais">
                     <h4>Informações Pessoais</h4>
                     <div class="campo">
@@ -142,7 +142,7 @@ session_start();
 
                     <div class="campo">
                         <label for="link">Link para site</label>
-                        <input type="text" name="link" id="link" required>
+                        <input type="text" name="link" id="link" >
                     </div>
 
                 </div>

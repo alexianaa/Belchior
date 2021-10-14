@@ -37,7 +37,7 @@ CREATE TABLE `cadastro` (
   `complemento` varchar(50) DEFAULT NULL,
   `link` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,6 @@ CREATE TABLE `cadastro` (
 
 LOCK TABLES `cadastro` WRITE;
 /*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
-INSERT INTO `cadastro` VALUES (1,'Alexia Cardoso','alexiasilvacardoso@gmail.com','82988494263','Solarium','Fisica','','Sexta a Sábado, das ','Alagoas','Alagoas','Rua do Sol','Nº 45, ao lado da farmacia','https://www.instagram.com/alexiansc_/');
 /*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-11 19:50:23
+-- Dump completed on 2021-10-14 15:50:11

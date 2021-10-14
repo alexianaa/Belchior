@@ -74,9 +74,6 @@
                 </div>
             </div>
             
-            
-            
-
             <!-- Lojas em destaque -->
             <div id="carouselPagLoja" class="carousel carousel-dark slide pt-5" data-bs-ride="carousel">
 

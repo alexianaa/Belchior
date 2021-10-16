@@ -30,7 +30,9 @@
         <!-- Fonte da página -->
         <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
         <!-- js das estrelas -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../js/scripts.js"></script>
+        <script src="../html/avaliacao.php"></script>
     </head>
 
     <body>
@@ -108,19 +110,19 @@
                     <div class="col-sm-5 me-5">
                         <h2 id="rating">Avaliação: </h2>
                         
-                        <a href="javascript:void(0)" onclick="Avaliar(1)" >
+                        <a href="javascript:void(0)" onclick="Avaliar(1, id_loja)" >
                         <img class="estrelas" src="../img/star0.png" id="s1"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(2)" >
+                        <a href="javascript:void(0)" onclick="Avaliar(2, id_loja)" >
                         <img class="estrelas" src="../img/star0.png" id="s2"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(3)" >
+                        <a href="javascript:void(0)" onclick="Avaliar(3, id_loja)" >
                         <img class="estrelas" src="../img/star0.png" id="s3"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(4)" >
+                        <a href="javascript:void(0)" onclick="Avaliar(4, id_loja)" >
                         <img class="estrelas" src="../img/star0.png" id="s4"></a>
                                 
-                        <a href="javascript:void(0)" onclick="Avaliar(5)" >
+                        <a href="javascript:void(0)" onclick="Avaliar(5, id_loja)" >
                         <img class="estrelas" src="../img/star0.png" id="s5"></a>
 
                         <br>
@@ -307,5 +309,6 @@
     
         <!-- JavaScript Bundle with Popper (coisa pro bootstrap) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script>var id_loja=10;</script>
     </body>
 </html>

@@ -31,7 +31,6 @@ CREATE TABLE `avaliacoes` (
   `id` int(11) NOT NULL,
   `qtd_estrela` int(11) NOT NULL,
   `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

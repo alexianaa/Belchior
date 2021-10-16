@@ -1,9 +1,9 @@
 /* ESTRELAS DE AVALIAÇÃO*/
-function Avaliar(estrela) {
+function Avaliar(estrela, id) {
 
     var url = window.location;
     url = url.toString()
-    url = url.split("paginaloja.html");
+    url = url.split("paginaloja.php");
     url = url[0];
 
     var s1 = document.getElementById("s1").src;
@@ -108,5 +108,12 @@ function Avaliar(estrela) {
     }
     
 document.getElementById('rating').innerHTML = "Avaliação: " + avaliacao;
-    
+    $.ajax({
+    method: "POST",
+    url: "avaliacao.php",
+    data: { qtd_estrela: avaliacao, id:id }
+    })
+    .done(function( response ) {
+        alert (response)
+    }); 
 }

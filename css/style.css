@@ -110,6 +110,7 @@ body {
 }
 
 #botao {
+    text-align: center;
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -120,6 +121,8 @@ body {
 #botao:hover {
     background: #E56399;
 }
+
+
 
 /* RODAPÉ */
 #rodape {

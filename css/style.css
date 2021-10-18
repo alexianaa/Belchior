@@ -45,6 +45,12 @@ body {
     margin-top: 125px;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 /* TEXTO DA PÁGINA SOBRE NÓS */
 #sobre p {
     font-size: large;

@@ -8,7 +8,7 @@
     $host = 'localhost';
     $user = 'root';
     $pass = '';
-    $bd   = 'avaliacao_lojas';
+    $bd   = 'belchior';
 
     $conectar = mysqli_connect( $host, $user, $pass, $bd);
 

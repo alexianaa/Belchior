@@ -68,17 +68,17 @@ session_start();
                     <h4>Informações Pessoais</h4>
                     <div class="campo">
                         <label for="nome">Nome completo:</label>
-                        <input type="text" name="nome" id="nome" required>
+                        <input type="text" name="nome" id="nome" >
                     </div>
 
                     <div class="campo">
                         <label for="email">E-mail:</label>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email" >
                     </div>
 
                     <div class="campo">
                         <label for="telefone">Telefone:</label>
-                        <input type="tel" name="telefone" id="telefone" required> 
+                        <input type="tel" name="telefone" id="telefone" > 
                     </div>
                 </div>
 

@@ -6,7 +6,7 @@ session_start();
 <html lang="pt-br">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <title><?php echo $nome ?> | Belchior Localizador de Brechós</title>
+        <title>Belchior</title>
         <link rel="shortcut icon" href="../img/LogoFavicon.ico" type="image/x-icon">
         <meta charset="utf-8">
         <!-- Bootstrap 5.1 -->
@@ -57,6 +57,7 @@ session_start();
         </div><!-- Fim do topo da página! -->
 
         <div id="conteudo" style="padding: 1em">
+        <h5 style="text-align:center">Resultados da busca </h5>
             <?php
                 //conexao banco
                 $host = 'localhost';
@@ -77,10 +78,41 @@ session_start();
                 $query = "SELECT * FROM cadastro WHERE nome_loja LIKE '%$nome_brecho%' LIMIT 5";
                 $result = mysqli_query($conectar, $query) or die(mysqli_error($conectar));;
 
+                //mostrando os resultados
                 while( $row = mysqli_fetch_array($result) ){
 
-                    echo "Resultado de busca: " . $row['nome_loja'] . "<br>";
+                    $result1= $row['nome_loja'];
 
+                    if ($result1 == "AMARELO brechó")
+                    echo "<a href='paginaloja_amarelobrecho.php'>Amarelo Brecho</a>" . "<br>";
+
+                    if ($result1 == "Ai que Lindo!")
+                    echo "<a href='paginaloja_brechoAiquelindo.php'>Ai que Lindo!</a>" . "<br>";
+
+                    if ($result1 == "Brechoanate")
+                    echo "<a href='paginaloja_brechoanate.php'>Brecho Anate</a>" . "<br>";
+
+                    if ($result1 == "Brechó Ki Achado")
+                    echo "<a href='paginaloja_brechokiachado.php'>Brechó Ki Achado</a>" . "<br>";
+
+                    if ($result1 == "BrechóMMix")
+                    echo "<a href='paginaloja_brechommix.php'>Brecho MMix</a>" . "<br>";
+
+                    if ($result1 == "BsB.Brecho")
+                    echo "<a href='paginaloja_bsb.brecho.php'>BsB Brecho</a>" . "<br>";
+
+                    if ($result1 == "Frôzinha Brechó")
+                    echo "<a href='paginaloja_frozinha_brecho.php'>Frôzinha Brechó</a>" . "<br>";
+
+                    if ($result1 == "Sonho Brecho")
+                    echo "<a href='paginaloja_sonho_brecho.php'>Sonho Brecho</a>" . "<br>";
+
+                    if ($result1 == "To Face Brechó")
+                    echo "<a href='paginaloja_tofacebrecho.php'>Toface Brecho</a>" . "<br>";
+
+                    if ($result1 == "Uzzadesapego")
+                    echo "<a href='paginaloja_usadesapego.php'>Uzza Desapego</a>" . "<br>";
+                    
                 }
             ?>
         </div>

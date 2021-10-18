@@ -37,7 +37,7 @@ CREATE TABLE `cadastro` (
   `complemento` varchar(50) DEFAULT NULL,
   `link` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,6 +46,7 @@ CREATE TABLE `cadastro` (
 
 LOCK TABLES `cadastro` WRITE;
 /*!40000 ALTER TABLE `cadastro` DISABLE KEYS */;
+INSERT INTO `cadastro` VALUES (1,'Alícia Büchele','','','Sonho Brecho','Online','','','DF','','','','https://www.instagram.com/sonho_brecho/'),(2,'Hellen Cristina','','','Ai que Lindo!','Online','','seg à sab 9h ~ 18h','','','','','https://www.instagram.com/aiquelindo.brecho/'),(3,'Alessa Pamela Ferreira Amorim','','','Uzzadesapego','Fisica','','8hrs às 22:00','Alagoas','Maceió','','',''),(4,'Lays Quaresma','','','BsB.Brecho','Fisica','','Segunda a sábado','DF','','Rua 25 sul lote 11','','https://instagram.com/bsb.brecho?utm_medium=copy_link'),(5,'Mônica Silva e Márcio Alencar','','61982318971','BrechóMMix','Online','','De segunda a sexta-f','DF','','','','https://instagram.com/brechommix?utm_medium=copy_link'),(6,'Amanda Elisa de Oliveira Carvalho','','','Frôzinha Brechó ','Fisica','','Todos os dias das 10','DF','','','','www.instagram.com/frozinha.brecho'),(7,'Anna vitoria cabral de Oliveira ','','','Brechoanate','Online','','Atualizações geralme','DF','','','','https://instagram.com/brechoanate?utm_medium=copy_link'),(8,'Arthur Alves Lôbo','','','AMARELO brechó','Fisica','','Segunda a sábado, de','DF','','','','https://www.instagram.com/amareloxbrecho'),(9,'Wendny Gomes Boaventura da Silva ','','061995064161','Brechó Ki Achado ','Fisica','','Segunda a sábado das','DF','','','',''),(10,'Ludmila Barbosa ','','','To Face Brechó','Online','','todos os dias, 10h à','DF','','','','www.instagram.com/toface.brecho');
 /*!40000 ALTER TABLE `cadastro` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-14 15:50:11
+-- Dump completed on 2021-10-18 18:34:04

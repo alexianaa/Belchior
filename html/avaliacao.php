@@ -17,4 +17,13 @@
     $result_usuario = "INSERT INTO avaliacoes (id, qtd_estrela)
     VALUES ('$id', '$nota')";
     $resultado_usuario = mysqli_query($conectar, $result_usuario);
+
+    // tirando a média das avaliações
+    $medias = "SELECT AVG(qtd_estrela) FROM avaliacoes WHERE id = 1";
+    // executando a query
+    $media = mysqli_query($conectar, $medias);
+    // filtrando somente o valor da média
+    $exibir = mysqli_fetch_assoc($media);
+    $exibir = implode('|',$exibir);
+    $exibir = floatval($exibir)
 ?>

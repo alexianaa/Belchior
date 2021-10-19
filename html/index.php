@@ -58,10 +58,20 @@
         <div class="container-fluid">
             <div class="row">
 
+<<<<<<< HEAD
                 <!-- Título Destaque -->
                 <div class="col-md-3">
                     <h1>Destaques:</h1>
                 </div>
+=======
+                        <meta name="viewport" content="width=device-width, user-scalable=no">
+                        <div id="divBusca" style="text-align: end;" class="pt-3">
+                            <form action="busca2.php" method="post">
+                                <input type="text" name="nome_brecho" size="23" placeholder="Encontre o brechó ideal" aria-label="buscar" style="height: 38px; padding-left: 2%; border: 2px solid black;" required>
+                                <input class="btn" id="botao" type="submit" value="Buscar" name="submit"></input>                        
+                            </form>  
+                        </div>
+>>>>>>> 0fe3e725443fc739ffd742576a77ac7263633aff
 
                 <!-- Caixa de busca -->
                 <div class="col-5 ms-auto">

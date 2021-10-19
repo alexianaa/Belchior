@@ -1,4 +1,8 @@
 
 /Ana/Excelente loja!
 /Maria/Produtos incríveis!
+<<<<<<< HEAD
 /João/Muito caro, horrível!/gdg/gdgd/Lala/Lala!
+=======
+/João/Muito caro, horrível!/gdg/gdgd/Alexia Cardoso/AAAAAAAAAAA
+>>>>>>> 0fe3e725443fc739ffd742576a77ac7263633aff

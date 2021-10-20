@@ -137,73 +137,10 @@
                         <span class="fa fa-star"></span>
 
                         <div class="row">
-                            <!-- Avaliação nota 5 -->
-                            <div class="side">
-                                <div><h3>5</h3></div>
-                            </div>
-                            <div class="middle">
-                                <div class="bar-container">
-                                    <div class="bar-5"></div>
-                                </div>
-                            </div>
-                            <div class="side right">
-                                <div>150</div>
-                            </div>
-
-                            <!-- Avaliação nota 4 -->
-                            <div class="side">
-                                <div><h3>4</h3></div>
-                            </div>
-                            <div class="middle">
-                                <div class="bar-container">
-                                    <div class="bar-4"></div>
-                                </div>
-                            </div>
-                            <div class="side right">
-                                <div>63</div>
-                            </div>
-                            
-                            <!-- Avaliação nota 3 -->
-                            <div class="side">
-                                <div><h3>3</h3></div>
-                            </div>
-                            <div class="middle">
-                                <div class="bar-container">
-                                    <div class="bar-3"></div>
-                                </div>
-                            </div>
-                            <div class="side right">
-                                <div>15</div>
-                            </div>
-
-                            <!-- Avaliação nota 2 -->
-                            <div class="side">
-                                <div><h3>2</h3></div>
-                            </div>
-                            <div class="middle">
-                                <div class="bar-container">
-                                    <div class="bar-2"></div>
-                                </div>
-                            </div>
-                            <div class="side right">
-                                <div>6</div>
-                            </div>
-
-                            <!-- Avaliação nota 1 -->
-                            <div class="side">
-                                <div><h3>1</h3></div>
-                            </div>
-                            <div class="middle">
-                                <div class="bar-container">
-                                    <div class="bar-1"></div>
-                                </div>
-                            </div>
-                            <div class="side right">
-                                <div>20</div>
-                            </div>
+                            <?php error_reporting(E_ERROR | E_PARSE); include('avaliacao.php')?>
+                        <br>
+                            <h4 style="text-align: center">Avaliação da loja: &ensp;<?php echo ($exibir) ?></h4>
                         </div>
-                        <br>
-                        <br>
                     </div>
 
                     <!-- Comentários -->

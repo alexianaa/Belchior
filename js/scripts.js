@@ -114,6 +114,5 @@ document.getElementById('rating').innerHTML = "Avaliação: " + avaliacao;
     data: { qtd_estrela: avaliacao, id:id }
     })
     .done(function( response ) {
-        alert (response)
     }); 
 }

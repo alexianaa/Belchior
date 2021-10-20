@@ -133,7 +133,8 @@
                         <span class="fa fa-star"></span>
 
                         <div class="row">
-                            <?php error_reporting(E_ERROR | E_PARSE); include('avaliacao.php')?>
+                            <?php $medias = "SELECT AVG(qtd_estrela) FROM avaliacoes WHERE id = 5";
+                            error_reporting(E_ERROR | E_PARSE); include('avaliacao.php')?>
                         <br>
                             <h4 style="text-align: center">Avaliação da loja: &ensp;<?php echo ($exibir) ?></h4>
                         </div>

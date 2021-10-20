@@ -85,7 +85,7 @@
                     </div>
 
                     <!-- Contatos e links -->
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <br>
 
                         <h3 class="pt-5 pb-3">Contato:</h3>

@@ -96,6 +96,7 @@
                         </ul>
 
                     </div>
+                </div>
             </div>
 
             <!-- Avaliação brechó -->

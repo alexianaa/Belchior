@@ -97,6 +97,7 @@
                             <li><h5>9:00 - 18:00</h5></li>
                         </ul>
                     </div>
+                </div>
             </div>
 
             <!-- Avaliação brechó -->
@@ -218,7 +219,7 @@
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </div>
         </div>
 

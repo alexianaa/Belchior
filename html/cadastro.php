@@ -152,8 +152,8 @@ session_start();
                     <label>Aceito os termos de uso</label>
                 </div>
 
-                <button type="submit" name="submit" id="botao">Concluído</button>
-                </form>
+                <button type="submit" name="submit" class="botao">Concluído</button>
+            </form>
         </div>
 
         <!-- Rodape -->

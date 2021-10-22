@@ -63,12 +63,12 @@
                     <h1>Destaques:</h1>
                 </div>
                 <meta name="viewport" content="width=device-width, user-scalable=no">
-                <div id="divBusca" style="text-align: end;" class="pt-3">
+                <div id="divBusca" style="margin-left: 30%;" class="col-md-4 pt-3">
                     <form action="busca2.php" method="post">
                         <input type="text" name="nome_brecho" size="23" placeholder="Encontre o brechó ideal"
                             aria-label="buscar" style="height: 38px; padding-left: 2%; border: 2px solid black;"
                             required>
-                        <select name="field" style="height: 38px; padding-left: 2%; border: 2px solid black;"
+                        <select name="field" style="height: 38px; padding-left: 1%; border: 2px solid black;"
                             placeholder="Filtros;" required>
                             <option value="title">Filtros</option>
                             <option value="online">Loja online</option>
@@ -76,12 +76,6 @@
                         </select>
                         <input class="btn" id="botao" type="submit" value="Buscar" name="submit"></input>
                     </form>
-                    </form>
-                </div>
-
-                <!-- Caixa de busca -->
-                <div class="col-5 ms-auto">
-
                 </div>
             </div>
         </div>
